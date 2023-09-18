@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<style>
+    /*set border to the form*/
+      
+    form {
+        border: 3px solid #f1f1f1;
+    }
+    /*assign full width inputs*/
+      
+    input[type=text],
+    input[type=password],input[type=email] {
+        width: 70%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+    }
+    /*set a style for the buttons*/
+      
+    button {
+        background-color: #2f32b1;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        cursor: pointer;
+        width: 76%;
+    }
+    /* set a hover effect for the button*/
+      
+    button:hover {
+        opacity: 0.8;
+    }
+    /*set extra style for the cancel button*/
+      
+    .container {
+        padding: 16px;
+    }
+    /*set the forgot password text*/
+      
+    span.psw {
+        float: right;
+        padding-top: 16px;
+    }
+    /*set styles for span and cancel button on small screens*/
+      
+    @media screen and (max-width: 300px) {
+        span.psw {
+            display: block;
+            float: none;
+        }
+        
+    }
+</style>
+  
+<body>
+  
+    <h2>Signup Form</h2>
+    <!--Step 1 : Adding HTML-->
+    <form action="/submit" method="post">
+        
+        
+        <div class="container">
+            {% if error %}  
+            <p><strong>Error</strong>: {{error}}</p>  
+            {% endif %}
+             
+            <label><b>Email: </b></label>
+            <input type="email" placeholder="Enter Email" name="email" required><br><br>
+            
+            <label><b>First Name: </b></label>
+            <input type="text" placeholder="Enter Username" name="fname" required><br><br>
+            <label><b>Last Name: </b></label>
+            <input type="text" placeholder="Enter Username" name="lname" required><br><br>
+            <label><b>Password: </b></label>
+            <input type="password" placeholder="Enter Password" name="password" required><br><br>
+             
+            <label><b>Confirm Password: </b></label>
+            <input type="password" placeholder="Enter Password again" name="cpassword" required>
+  
+            <button type="submit">Login</button><br><br>
+            <!-- <input type="checkbox" checked="checked"> Remember me -->
+        </div>
+
+        <div class="container" style="background-color:#f8f8f8">
+            <span class="psw"><p>Already a member? </p><a href="/login" >Sign In</a>
+        </div>
+    </form>
+  
+</body>
+  
+</html>

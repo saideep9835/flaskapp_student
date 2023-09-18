@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+        <style>
+            .header {
+                overflow: hidden;
+                background-color: #f1f1f1;
+                padding: 20px 10px;
+                font-size: 18;
+                color: rebeccapurple;
+            }
+            body{
+                text-align: center;
+                background-color: powderblue;
+            }
+            input[type=text],input[type=email],input[type=password], select{
+                
+                width: 60%;
+                padding: 15px 50px;
+                margin: 8px 0;
+                display: inline-block;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                box-sizing: border-box;
+            
+            }
+            input[type=file]{
+                
+                width: 60%;
+                padding: 15px 50px;
+                margin: 8px 0;
+                display: inline-block;
+                border: 1px solid rgb(216, 20, 20);
+                border-radius: 4px;
+                box-sizing: border-box;
+            
+            }
+            button {
+                width: 60%;
+                background-color: #4CAF50;
+                color: white;
+                padding: 14px 20px;
+                margin: 8px 0;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+            }
+
+            button:hover {
+                background-color: #45a049;
+            }
+        
+        
+
+        </style>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Registration Details</h1>
+        </div>
+        <h2>Submit your details to register !!!</h2>
+        <form action="\submit_student" enctype="multipart/form-data" method="post">
+            <input type="text" name="fname" placeholder="Enter your First name" required><br><br>
+            <input type="text" name="lname" placeholder="Enter your Last name" required><br><br>
+            <input type="text" name="mobile" placeholder="Enter valid mobile number" required><br><br>
+            <input type="email" name="email" placeholder="Enter your Email" required><br><br>
+            <h2>Select your date of birth</h2>
+            <input type="date" name="dob" placeholder="Enter Date Of Birth" required><br><br>
+            
+            <input type="radio" id="male" name="gender" value="Male" >
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="gender" value="Female">
+            <label for="female">Female</label>
+            <input type="radio" id="other" name="gender" value="other">
+            <label for="other">Other</label><br><br>
+            <select name="qual" id="qual">
+                <option value="Select">Select</option>
+                <option value="B.Tech">B.Tech</option>
+                <option value="MCA">MCA</option>
+                <option value="Graduation">Graduation</option>
+                <option value="Post Graduation"> Post Graduation</option>
+                <option value="MBA"> MBA</option>
+                <option value="Others"> Others</option>
+              </select><br><br>
+              <h3>Select your skills</h3>
+            <input type="checkbox" id="Python" name="python" value="python">
+            <label for="Python"> Python</label><br>
+            <input type="checkbox" id="net" name="net" value="net">
+            <label for="Net"> .Net</label><br>
+            <input type="checkbox" id="java" name="java" value="java">
+            <label for="java"> JAVA</label><br>
+            <input type="checkbox" id="database" name="database" value="database">
+            <label for="database"> Database</label><br><br>
+            <h3>Please upload your passport size photo</h3>
+            <input type="file" id="pic" name="pic"><br><br>
+            <h3><label for="des">Description:</label></h3><br>
+            <textarea id="des" name="des" rows="4" cols="50" >
+                
+            </textarea><br><br>
+            <button>Create Student</button> 
+
+        </form>
+    </body>
+    
+</html>
